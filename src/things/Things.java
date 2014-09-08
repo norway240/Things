@@ -13,8 +13,6 @@ public class Things {
 	/*This is a program that does
 	well, things...*/
 	
-	//Potatos!
-	
 	public static boolean isNumeric(String str){
 	  NumberFormat formatter = NumberFormat.getInstance();
 	  ParsePosition pos = new ParsePosition(0);
@@ -61,7 +59,7 @@ public class Things {
 		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 	}
 	
-	public static void main(String args[]){
+	public static void main(String args[]){ //The start is down here because I said so...
 		String many = JOptionPane.showInputDialog(null, "How many things should we do?", null);
 		allTheThings(many);
 	}
