@@ -13,6 +13,8 @@ public class Things {
 	/*This is a program that does
 	well, things...*/
 	
+	//Potatos!
+	
 	public static boolean isNumeric(String str){
 	  NumberFormat formatter = NumberFormat.getInstance();
 	  ParsePosition pos = new ParsePosition(0);
