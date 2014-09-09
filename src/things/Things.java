@@ -3,6 +3,7 @@ package things;
 import java.awt.event.WindowEvent;
 import java.text.NumberFormat;
 import java.text.ParsePosition;
+import java.util.Locale;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -30,15 +31,14 @@ public class Things {
 		frame.add(text);
 		frame.setVisible(true);
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+	    
 		if(things.equalsIgnoreCase("All")){
 			for(int i=1; i<3; i++){
-				text.setText(manythings+" THINGS");
+				text.setText(NumberFormat.getNumberInstance(Locale.US).format(manythings)+" THINGS");
 				manythings++;
 				i=1;
 				if(manythings==2147483647){
 					frame.setVisible(false);
-					frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 					JOptionPane.showMessageDialog(null, "I'm sorry but I've run out of things to do.\nI guess you have done them all...", null, 1, null);
 					i=3;
 				}
@@ -47,7 +47,7 @@ public class Things {
 			if (isNumeric(things)){
 				Integer intmany = Integer.parseInt(things);
 				for(int i=1; i<=intmany; i++){
-					text.setText(i+" THINGS");
+					text.setText(NumberFormat.getNumberInstance(Locale.US).format(i)+" THINGS");
 				}
 				JOptionPane.showMessageDialog(null, "Congratulations you did "+intmany+" things!", null, 1, null);
 			}else{
