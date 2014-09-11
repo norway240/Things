@@ -43,6 +43,9 @@ public class Things {
 					i=3; //Stops the loop
 				}
 			}
+		}else if(things.equalsIgnoreCase("none")){
+			frame.setVisible(false);
+			JOptionPane.showMessageDialog(null, "You sir, are a terrible human being! How dare you ruin all the fun.. I hate you. Goodbye.", null, 1, null);
 		}else{ //If the user didn't choose to do all the things
 			if (isNumeric(things)){ //Check if what the user entered is a number
 				Integer intmany = Integer.parseInt(things); //If it is then we shall do that many things
